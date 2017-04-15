@@ -1,0 +1,21 @@
+
+.a {    
+    background-position: 0px 0px;
+    width: 500px;
+    height: 500px;  }
+
+.b {    
+    background-position: 0px -504px;
+    width: 250px;
+    height: 250px;  }
+
+.c {    
+    background-position: -504px 0px;
+    width: 320px;
+    height: 320px;  }
+
+.result_fb_share_btn {    
+    background-position: -254px -504px;
+    width: 360px;
+    height: 57px;    }
+    .result_fb_share_btn:hover {   background-position:-254px -561px;   }
