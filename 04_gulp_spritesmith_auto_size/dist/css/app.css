@@ -1,0 +1,34 @@
+.a.sprite{
+    background-image: url(../img/sprite.png);
+}
+.a {
+    background-position: 0px 0px;
+    width: 394px;
+    height: 514px;    
+}
+.b.sprite{
+    background-image: url(../img/sprite.png);
+}
+.b {
+    background-position: -398px 0px;
+    width: 250px;
+    height: 250px;    
+}
+
+.a.autosize {
+    background-position: 0vw 0vw;    
+    width: 61.5625vw;
+    height: 80.3125vw;
+    background-size: 164.46700507614213%;
+}
+.b.autosize {
+    background-position: -62.18749999999999vw 0vw;    
+    width: 39.0625vw;
+    height: 39.0625vw;
+    background-size: 259.2%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
