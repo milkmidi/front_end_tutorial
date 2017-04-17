@@ -1,34 +1,69 @@
-.a.sprite{
-    background-image: url(../img/sprite.png);
-}
-.a {
-    background-position: 0px 0px;
-    width: 394px;
-    height: 514px;    
-}
-.b.sprite{
-    background-image: url(../img/sprite.png);
-}
-.b {
-    background-position: -398px 0px;
-    width: 250px;
-    height: 250px;    
-}
-
-.a.autosize {
-    background-position: 0vw 0vw;    
-    width: 61.5625vw;
-    height: 80.3125vw;
-    background-size: 164.46700507614213%;
-}
-.b.autosize {
-    background-position: -62.18749999999999vw 0vw;    
-    width: 39.0625vw;
-    height: 39.0625vw;
-    background-size: 259.2%;
-}
-
 * {
   margin: 0;
   padding: 0;
+}
+
+.a.sprite, 
+.b.sprite, 
+.c.sprite, 
+.close_btn.sprite
+{
+    background: url(../img/sprite.png) no-repeat; }
+
+.a.autosize::before, 
+.b.autosize::before, 
+.c.autosize::before, 
+.close_btn.autosize::before
+{
+    content:'';
+    display:block;  }
+
+.a {
+    background-position: 0px 0px;
+    width: 394px;
+    height: 514px;  }
+.b {
+    background-position: -725px 0px;
+    width: 250px;
+    height: 250px;  }
+.c {
+    background-position: -398px 0px;
+    width: 323px;
+    height: 273px;  }
+.close_btn {
+    background-position: -725px -254px;
+    width: 38px;
+    height: 38px;  }
+
+.a.autosize {    
+    background-position: 0% 0;
+    background-size: 247.46192893401013% auto;    }
+    .a.autosize::before{        
+        padding-top:130.45685279187816%;     }
+.b.autosize {    
+    background-position: 100% 0%;
+    background-size: 390% auto;    }
+    .b.autosize::before{        
+        padding-top:100%;     }
+.c.autosize {    
+    background-position: 61.04294478527608% 0%;
+    background-size: 301.8575851393189% auto;    }
+    .c.autosize::before{        
+        padding-top:84.52012383900929%;     }
+.close_btn.autosize {    
+    background-position: 77.37459978655284% 53.36134453781513%;
+    background-size: 2565.7894736842104% auto;    }
+    .close_btn.autosize::before{        
+        padding-top:100%;     }
+
+.a.autosize, 
+.b.autosize, 
+.c.autosize, 
+.close_btn.autosize
+{
+    width:100%;
+    height:auto;    
+}
+.container {
+  width: 50%;
 }

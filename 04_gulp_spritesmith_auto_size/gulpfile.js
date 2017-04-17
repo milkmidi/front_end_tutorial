@@ -13,21 +13,20 @@ gulp.task('sprite',()=>{
             cssName: '_sprite.css',
             padding: 4,
             imgOpts: { quality: 100 },
-            cssTemplate: 'src/css/handlebars/basic.handlebars',
-            cssHandlebarsHelpers: {               
-                half(num) {
-                    return `${Math.floor(num / 2)}px`;
+            cssTemplate: 'src/css/template/basic.hbs',
+            cssHandlebarsHelpers: {      
+                echo( o ){
+                    console.log(o);
+                },  
+                percent(value, base) {
+                    return `${value / base * 100}%`;
                 },
-                retinaBGS(spriteSheetWidth, itemWidth) {
-                    return `${(spriteSheetWidth / itemWidth) * 100}%`;
-                },
-                getVW(itemWidth) {
-                    return `${(itemWidth / 640) * 100}vw`;
-                },
-                autoSizePosition(spriteSheetSize, itemSize, itemOffset) {
-                    const s = spriteSheetSize / itemOffset;
-                    const w = spriteSheetSize / 640;
-                    return `${(w / s) * 100}vw`;
+                bgPosition(spriteSize, size, offset) {
+                    const result = offset / (size - spriteSize) * 100;
+                    if( isNaN( result )){
+                        return "0";
+                    }
+                    return `${result}%`;
                 },
             },
         }));
